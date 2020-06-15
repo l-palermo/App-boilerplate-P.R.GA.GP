@@ -1,0 +1,19 @@
+{
+  "name": "app-boilerplate-prgagp",
+  "version": "1.0.0",
+  "description": "React app boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l-palermo/App-boilerplate-Y.R.GA.GP.git"
+  },
+  "author": "Luigi <luigi.palermo@clearscore.com> (https://www.clearscore.com/)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/l-palermo/App-boilerplate-Y.R.GA.GP/issues"
+  },
+  "homepage": "https://github.com/l-palermo/App-boilerplate-Y.R.GA.GP#readme"
+}
