@@ -1,8 +1,15 @@
-import "./app.css";
+import React from "react";
 
-export default () => {
-  const h3 = document.createElement("h3");
-  h3.setAttribute("class", "text");
-  h3.innerHTML = "Hello world";
-  return h3;
+import "./app.css";
+import ToolLogos from "./components/tool-logos/index.js";
+
+const App = () => {
+  return (
+    <>
+      <div className="text">Boilerplate</div>
+      <ToolLogos />
+    </>
+  );
 };
+
+export default App;

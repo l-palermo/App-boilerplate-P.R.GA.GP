@@ -11,6 +11,10 @@ Npm and Yarn both have a deep dependency tree with packages copied several times
 The duplicated packages often force the use of larger CI/CD resources and time.
 The package JSON structure created with `pnpm init` is slightly different from the one created with NPM or YARN.
 
+Install:
+
+`curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node`
+
 ---
 
 Rollup is a very popular javascript module bundler. It uses ES2015 format to rewrite the code and try to create smaller builds with the help of dead code elimination or tree-shaking.
@@ -20,6 +24,22 @@ The numerous plugins might bring some confusion this is also because there are n
 the developer needs to choose carefully. For example, in the docs, the 'rollup-plugin-style' is advised above the other, it does lots of cool things and supports different formats as SASS, POST-CSS, LESS etc, but it bundles the CSS inside the js bundle file and the docs are not clear on what is happening
 under the hood but the CSS seems to be embedded into the js file and this might then require further computation. It's no clear how rollup or the plugin will handle this.
 
-This is a good resource for rollup plugins: https://github.com/rollup/awesome
+The reesources on the web are confusing and not updated, it easy to find pages like this https://github.com/rollup/awesome with a bunch of useful plugin that unfortunately are deprecated and other pages like this https://github.com/rollup/plugins where there is a list of the new one. However the docs are not great and for a beginner is all a bit confusing. On the contrary I find webpack doc much more clearer and easy to navigate.
 
-The bundle speed is great so far and the live reload function also works great.
+Positive note, the bundle speed is good so far and the live reload function also works great.
+
+Install:
+
+`pnpm add -D rollup rollup-plugin-serve rollup-plugin-livereload rollup-plugin-generate-html-template rollup-plugin-clear rollup-plugin-css-porter @rollup/plugin-url @rollup/plugin-image`
+
+---
+
+BABEL, REACT
+
+Configuring Rollup for babel and react requires a bunch of plugins:
+
+Install:
+
+`pnpm add react react-dom`
+
+`pnpm add -D @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-babel @babel/preset-react @babel/preset-env @babel/core rollup-plugin-node-globals`

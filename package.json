@@ -19,15 +19,24 @@
   },
   "homepage": "https://github.com/l-palermo/App-boilerplate-Y.R.GA.GP#readme",
   "devDependencies": {
+    "@babel/core": "7.10.2",
+    "@babel/preset-env": "7.10.2",
+    "@babel/preset-react": "7.10.1",
+    "@rollup/plugin-babel": "5.0.3",
+    "@rollup/plugin-commonjs": "13.0.0",
     "@rollup/plugin-image": "2.0.5",
+    "@rollup/plugin-node-resolve": "8.0.1",
     "@rollup/plugin-url": "5.0.1",
     "rollup": "2.16.1",
     "rollup-plugin-clear": "2.0.7",
     "rollup-plugin-css-porter": "1.0.2",
     "rollup-plugin-generate-html-template": "1.6.1",
-    "rollup-plugin-image-files": "1.4.2",
     "rollup-plugin-livereload": "1.3.0",
-    "rollup-plugin-serve": "1.0.1",
-    "rollup-plugin-styles": "3.8.2"
+    "rollup-plugin-node-globals": "1.4.0",
+    "rollup-plugin-serve": "1.0.1"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   }
 }

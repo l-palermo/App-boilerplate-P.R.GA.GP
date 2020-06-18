@@ -1,18 +1,35 @@
 import serve from "rollup-plugin-serve";
-// import styles from "rollup-plugin-styles";
 import htmlTemplate from "rollup-plugin-generate-html-template";
 import clear from "rollup-plugin-clear";
 import livereload from "rollup-plugin-livereload";
+import css from "rollup-plugin-css-porter";
+import globals from "rollup-plugin-node-globals";
 import image from "@rollup/plugin-image";
-import url from '@rollup/plugin-url';
-import css from 'rollup-plugin-css-porter';
+import url from "@rollup/plugin-url";
+import babel from "@rollup/plugin-babel";
+import resolve from "@rollup/plugin-node-resolve";
+import commonJS from "@rollup/plugin-commonjs";
 
 export default {
   input: "src/index.js",
   output: {
     file: "dist/bundle.js",
   },
+  // external: ["react", "react-dom"],
   plugins: [
+    // Locate and bundle third-party dependencies in node_modules
+    resolve(),
+    babel({
+      exclude: "node_modules/**",
+      presets: ["@babel/env", "@babel/preset-react"],
+    }),
+    // convert CommonJS modules to ES6
+    commonJS({
+      include: "node_modules/**",
+    }),
+    // takes care of node global variables
+    globals(),
+    // dev-server
     serve({
       open: true,
       openPage: "/",
@@ -21,16 +38,21 @@ export default {
     }),
     // styles(),
     css(),
+    // custom html template
     htmlTemplate({
       template: "public/index.html",
       target: "dist/index.html",
     }),
+    // clear the dist folder after each build
     clear({
       targets: ["dist"],
       watch: true,
     }),
+    // livereload after changes, very handy, no page refresh for css
     livereload(),
+    // allow to import image type of assets
     image(),
-    url()
+    // allow to import assets as data:urls
+    url(),
   ],
 };
