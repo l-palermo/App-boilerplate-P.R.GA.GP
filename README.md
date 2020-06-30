@@ -43,3 +43,14 @@ Install:
 `pnpm add react react-dom`
 
 `pnpm add -D @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-babel @babel/preset-react @babel/preset-env @babel/core rollup-plugin-node-globals`
+
+---
+
+JEST, REACT TESTING LIBRARY
+
+Jest is still the testing framework of choice for various reasons like great support and discussion on the web about different topics and issues, it is fairly quick, fairly easy to set up and does what it is required to do well. Moreover, most of the React Testing Library code examples are base on the Jest testing framework.
+A fairly similar alternative would be Mocha.
+
+React testing library is a great tool and I want to re-adopt it also in this boilerplate to get more confidence with it.
+
+---

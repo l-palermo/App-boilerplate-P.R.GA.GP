@@ -6,7 +6,7 @@ import ToolLogos from "./components/tool-logos/index.js";
 const App = () => {
   return (
     <>
-      <div className="text">Boilerplate</div>
+      <h1 className="text">Boilerplate</h1>
       <ToolLogos />
     </>
   );
