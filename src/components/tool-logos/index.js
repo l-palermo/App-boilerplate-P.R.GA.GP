@@ -1,3 +1,3 @@
-import ToolLogos from "./tool-logos.js";
+import ToolLogos from './tool-logos.js';
 
 export default ToolLogos;
