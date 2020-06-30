@@ -1,7 +1,8 @@
 name: Deploy CD
 
 on:
-  [push]
+  push:
+    branches: [master]
 
 jobs:
   build:
