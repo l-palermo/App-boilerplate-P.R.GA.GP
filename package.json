@@ -6,7 +6,7 @@
   "scripts": {
     "start": "rollup -cw",
     "test": "jest",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js --environment production"
   },
   "repository": {
     "type": "git",
