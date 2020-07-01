@@ -54,3 +54,19 @@ A fairly similar alternative would be Mocha.
 React testing library is a great tool and I want to re-adopt it also in this boilerplate to get more confidence with it.
 
 ---
+
+ESLINT, PRETTIER, HUSKY
+
+These three tools are still my favorite choice. They do what they need to do, the docs are good and there is a lot of support on the web for different use cases. 
+This helps me in maintaining code redability, facilitating my dev experience and focuses on more important things.
+
+---
+
+GITHUB PAGES, GITHUB ACTIONS
+
+This time decided to go full-on with GitHub. GitHub actions are very easy to setup and help with keeping good quality workflow, reducing bugs and making sure the code passes the tests and build correctly before being merged to master. More actions can be set up to improve the deployment process.
+About Github Pages instead, the way it works is still a bit cryptic for me and require some more investigations. There is a good amount of docs on how to deploy docs but not much information on how to lead GitHub pages to look for the built file in the folder of our choice. Apparently it wants the built to be in the root folder and that's why the gh-pages plugin automatically creates a gh-pages branch where stores the built. I guess this is what every other hosting provider does under the hood but doesn't seem nice having a stale branch on our repo.
+
+---
+
+STYLE
