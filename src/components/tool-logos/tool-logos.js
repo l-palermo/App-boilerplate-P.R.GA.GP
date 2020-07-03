@@ -1,10 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import logo from '../../assets/pnpm.png';
-import './tool-logos.css';
+import { LogosContainer, Logo } from './styled-components';
 
-const ToolLogos = () => {
-    return <img data-testid="tool-logos" className="logo" src={logo} alt="image" />;
+const ToolLogos = ({ logos }) => {
+    return (
+        <LogosContainer data-testid="logos-container">
+            {logos.map(({ src, alt }) => {
+                return <Logo key={alt} src={src} alt={alt} />;
+            })}
+        </LogosContainer>
+    );
+};
+
+ToolLogos.propTypes = {
+    logos: PropTypes.arrayOf(
+        PropTypes.shape({ src: PropTypes.string.isRequired, alt: PropTypes.string.isRequired })
+            .isRequired
+    ).isRequired,
 };
 
 export default ToolLogos;

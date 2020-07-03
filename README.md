@@ -1,5 +1,7 @@
 # App-boilerplate-P.R.GA.GP
 
+Deployed at: https://l-palermo.github.io/App-boilerplate-P.R.GA.GP/
+
 Most of the reasoning behind this boilerplate derives from this <a href="https://github.com/l-palermo/App-boilerplate-Y.W.L.DO.C">previous work</a> part of the same series of exercise.
 
 PNPM
@@ -55,10 +57,12 @@ React testing library is a great tool and I want to re-adopt it also in this boi
 
 ---
 
-ESLINT, PRETTIER, HUSKY
+ESLINT, PRETTIER, HUSKY, A11Y
 
-These three tools are still my favorite choice. They do what they need to do, the docs are good and there is a lot of support on the web for different use cases. 
+These three tools are still my favorite choice. They do what they need to do, the docs are good and there is a lot of support on the web for different use cases.
 This helps me in maintaining code redability, facilitating my dev experience and focuses on more important things.
+
+A11Y is linter tool for accessibility. It is suggested by React and it will definitely help me in writing more accessible code.
 
 ---
 
@@ -69,4 +73,10 @@ About Github Pages instead, the way it works is still a bit cryptic for me and r
 
 ---
 
-STYLE
+LINARIA
+
+I like writing `CSS in JS` and Linaria is becoming a popular tool to avoid adding runtime to your app. I have already initialized the previous Boilerplate with Linaria and now I want to test how easy/possible is adding it using the Rollup bundler.
+
+Installing Linaria is not as straight forward as it is with Webpack. Babel needs to be configured via a .babelrc file because configuring Babel via the Babel-Rollup-plugin generates compiling errors from Linaria. I haven't found much information on why this happen but it seems due to the order in wich the code get transpiled by each plugin. Also a bunch of other missing dependencies error came out but were easily resolvable.
+
+Overall it works as expected.
