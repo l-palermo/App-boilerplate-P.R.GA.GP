@@ -1,5 +1,14 @@
 # App-boilerplate-P.R.GA.GP
 
+`todos:`
+> review Linaria settings
+
+> find out more about rollup plugin order
+
+
+> find out more about bable bundle worning
+
+
 Deployed at: https://l-palermo.github.io/App-boilerplate-P.R.GA.GP/
 
 Most of the reasoning behind this boilerplate derives from this <a href="https://github.com/l-palermo/App-boilerplate-Y.W.L.DO.C">previous work</a> part of the same series of exercise.
